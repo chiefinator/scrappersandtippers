@@ -1,264 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<style>
-   	 p, h1,h3,h2 {
-     		 color: white;
-    		}
-  	li {
-    		color: white; /* Makes the text white */
-  	}
-  html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.fixed-text {
-  max-width: 600px;
-  width: 100%;
-  word-wrap: break-word;
-  margin: 0 auto;
-  text-align: center;
-}
-
-  .center-text {
-    text-align: center;
-  }
-.center-list {
-    list-style-position: inside; /* moves bullets with text */
-    text-align: center;
-    padding: 0;
-    max-width: 600px;
-  margin: 20px auto;
-  }
-body {
-  display: flex;
-  flex-direction: column;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: #f2f2f2;
-
-}
-h1, h2, h3 {
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-}
-section {
-  margin: 60px 0;
-}
-
-/* HEADER */
-.site-header {
-  background-color: #111;
-  width: 100%;
-    position: sticky;
-  top: 0;
-  z-index: 1000; /* keeps it above content */
-  border-bottom: 1px solid #333;
-
-}
-
-.header-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo */
-.logo {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Navigation */
-.nav {
-  display: flex;
-  gap: 20px;
-}
-/*.site-header {
-  background-color: #222; /* or red to test 
-  width: 100%;
-}*/
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.nav a:hover {
-  color: #4dd0e1;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .header-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-
-/* Push footer to bottom */
-.site-footer {
-  margin-top: auto;
-  background-color: #1f1f1f;
-  color: #f2f2f2;
-  padding: 20px;
-  font-size: 14px;
-}
-
-/* Layout */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 20px;
-}
-
-/* Columns */
-.footer-left,
-.footer-right {
-  width: 50%;
-}
-
-/* Text */
-.site-footer p {
-  margin: 6px 0;
-}
-
-.site-footer a {
-  color: #4dd0e1;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-.full-image {
-  width: 100vw;      /* force full viewport width */
-  max-width: 100%;   /* prevents overflow issues */
-  max-height: 300px;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 40px;
-  display: block;    /* removes tiny gaps */
-
-  }
-/* Mobile stacking */
-@media (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-
-  .footer-left,
-  .footer-right {
-    width: 100%;
-  }
-}
-
-  	</style>
-	<title>Scrappers and tippers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrappers & Tippers | Reliable Rubbish Removal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
-<body style="background-color: black;" >
+<body>
   <header class="site-header">
     <div class="header-container">
-      <div class="logo">
-        Scrappers & Tippers
-      </div>
-
+      <div class="logo">Scrappers & Tippers</div>
       <nav class="nav">
-       <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-	<main class="content">
-  <img src="copyright-free-images-750x420.jpg" class="full-image">
-  <h1>IN DEVOLEPMENT NOT READY FOR CUSTOMERS</h1>
-  <section class="intro">
-  <h2 class="center-text">Reliable Rubbish Removal & Scrap Metal Collection</h2>
-  <p class="center-text fixed-text">
-    Scrappers & Tippers provides fast, affordable tip runs and scrap metal
-    collection for homes, businesses, and construction sites. We take the
-    hassle out of waste removal so you don’t have to.
-  </p>
-</section>
-<ul class="features center-list">
-  <li class="center-text">Household rubbish removal</li>
-  <li class="center-text">Green waste & yard clean-ups</li>
-  <li class="center-text">Scrap metal collection & recycling</li>
-  <li class="center-text">Garage, shed, and site clean-outs</li>
-  <li>Quick tip runs with no stress</li>
-</ul>
-<section class="why-us">
-  <h3 class="center-text">Why Choose Scrappers & Tippers?</h3>
-  <p class="center-text fixed-text">
-    We’re local, reliable, and committed to responsible waste disposal.
-    Whether it’s a small load or a full clean-out, we show up on time
-    and get the job done properly.
-  </p>
-</section>
-<section class="cta">
-  <p class="center-text">
-    📞 Call or text <strong>0435 763 573</strong> for a free quote  
-    <br>
-    Same-day service available
-  </p>
-  <a href="pricing.html" class="center-text">my pricing guide</a>
-</section>
- <!--
-	<ul>
-		<li>ligh rubish 50</li>
-		<li>medium rubish 100</li>
-		<li>hard rubish 150</li>
-		<li>half cubic metre</li>
-		<li>1 cubic meter</li>
-		<li>2 cubic meter</li>
-		<li>3 cubic meters</li>
-		<li>4 cubic meters</li>
-		<li>5 cubic meters</li>
-	</ul>*/-->
-	</main>
-<footer class="site-footer">
-  <div class="footer-container">
-    
-    <div class="footer-left">
-      <p><strong>Scrappers & Tippers</strong></p>
-      <p>Rubbish Removal • Tip Runs • Scrap Metal Collection</p>
-      <p>© 2026 Scrappers & Tippers</p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Reliable Waste Removal & Scrap Collection</h1>
+      <p>Fast, affordable, and eco-friendly rubbish removal for homes, businesses, and construction sites.</p>
+      <a href="contact.html" class="cta-button">Get a Free Quote</a>
     </div>
-
-    <div class="footer-right">
-      <p>📞 <a href="tel:0435763573">0435 763 573</a></p>
-      <p>✉️ <a href="mailto:admin@tippers.com">admin@tippers.com</a></p>
-      <p>Licensed waste disposal • Responsible recycling</p>
-    </div>
-
   </div>
-</footer>
+
+  <main class="content">
+    <section class="intro center-text">
+      <h2>Our Services</h2>
+      <p>We handle household rubbish, green waste, garage and shed clean-outs, scrap metal collection, and quick tip runs—all with reliability and care.</p>
+    </section>
+
+    <ul class="features">
+      <li>Household rubbish removal</li>
+      <li>Green waste & yard clean-ups</li>
+      <li>Scrap metal collection & recycling</li>
+      <li>Garage, shed, and site clean-outs</li>
+      <li>Quick tip runs with no stress</li>
+    </ul>
+
+    <section class="why-us center-text">
+      <h3>Why Choose Us?</h3>
+      <p>Local, reliable, and committed to responsible waste disposal. Whether it’s a small load or a full clean-out, we show up on time and get the job done properly.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p><strong>Scrappers & Tippers</strong></p>
+        <p>Rubbish Removal • Tip Runs • Scrap Metal Collection</p>
+        <p>© 2026 Scrappers & Tippers</p>
+      </div>
+      <div class="footer-right">
+        <p>📞 <a href="tel:0435763573">0435 763 573</a></p>
+        <p>✉️ <a href="mailto:admin@tippers.com">admin@tippers.com</a></p>
+        <p>Licensed waste disposal • Responsible recycling</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
