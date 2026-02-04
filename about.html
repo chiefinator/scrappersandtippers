@@ -3,15 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title | Scrappers & Tippers</title>
+  <title>About | Scrappers & Tippers</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="main.css">
+
+  <style>
+    /* About Page Specific Styling */
+    .about-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about-intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .about-intro img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #4dd0e1;
+    }
+
+    .about-intro p {
+      flex: 1;
+      line-height: 1.6;
+    }
+
+    .about-section h1, 
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .about-section ul {
+      list-style: disc inside;
+      margin: 15px 0;
+      padding: 0 20px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4dd0e1;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #36b8c9;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
-<body>
+<body style="background-color: black; color: #f2f2f2;">
 
   <!-- Header -->
   <header class="site-header">
@@ -30,10 +99,33 @@
 
   <!-- Main Content -->
   <main class="content">
-    <!-- Replace this section with page-specific content -->
-    <section>
-      <h1>Page Heading</h1>
-      <p>This is where your page content goes. Replace this with text, images, or other elements for this page.</p>
+    <section class="about-section">
+      <h1>About Scrappers & Tippers</h1>
+
+      <div class="about-intro">
+        <img src="selfie.jpg" alt="Owner of Scrappers & Tippers">
+        <p>Hi! I’m [Your Name], the founder of Scrappers & Tippers. At just 18, I started this business in 2024 to provide fast, reliable, and responsible rubbish removal and scrap metal collection services. Our young, energetic team is passionate about helping our community declutter safely and efficiently.</p>
+      </div>
+
+      <h2>Our Story</h2>
+      <p>Since 2024, we’ve been helping homes, businesses, and construction sites clear out waste efficiently. Every job is approached with care, professionalism, and a commitment to responsible disposal.</p>
+
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Local and reliable service – we arrive on time and get the job done</li>
+        <li>Licensed and insured for your peace of mind</li>
+        <li>Responsible recycling and disposal practices</li>
+        <li>Same-day service available for urgent requests</li>
+        <li>Friendly, professional service from a passionate young team</li>
+      </ul>
+
+      <h2>Our Equipment & Team</h2>
+      <p>We use modern trucks and equipment to handle any type of load safely and efficiently. Our team ensures that your property is protected while we work, and we always take extra care with difficult or bulky items.</p>
+
+      <div class="cta">
+        <p>📞 Call or text <strong>0435 763 573</strong> for a free quote or to schedule your rubbish removal.</p>
+        <a href="contact.html">Contact Us</a>
+      </div>
     </section>
   </main>
 

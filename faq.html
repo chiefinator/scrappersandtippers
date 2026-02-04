@@ -3,13 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title | Scrappers & Tippers</title>
+  <title>FAQ | Scrappers & Tippers</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="main.css">
+
+  <style>
+    /* FAQ Styling */
+    .faq-item { 
+      margin-bottom: 20px; 
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .faq-item h4 { 
+      cursor: pointer; 
+      color: #4dd0e1; 
+      position: relative;
+      padding-right: 25px;
+      transition: color 0.3s;
+    }
+
+    .faq-item h4::after {
+      content: "▶"; /* right arrow */
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active h4::after {
+      transform: translateY(-50%) rotate(90deg); /* rotates arrow down */
+    }
+
+    .faq-answer { 
+      margin-top: 8px; 
+      display: none; 
+      padding-left: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,10 +66,39 @@
 
   <!-- Main Content -->
   <main class="content">
-    <!-- Replace this section with page-specific content -->
     <section>
-      <h1>Page Heading</h1>
-      <p>This is where your page content goes. Replace this with text, images, or other elements for this page.</p>
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq-item">
+        <h4>What are your pricing options?</h4>
+        <p class="faq-answer">Pricing depends on the type and volume of waste. We offer transparent, affordable rates—see our pricing page for more details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do I need to be home when you pick up the rubbish?</h4>
+        <p class="faq-answer">Not always. We can arrange a convenient drop-off time or handle on-site clean-ups with prior permission.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do you recycle scrap metal?</h4>
+        <p class="faq-answer">Yes! We separate and recycle all scrap metal responsibly, reducing landfill and supporting sustainable practices.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What types of waste do you collect?</h4>
+        <p class="faq-answer">We handle household rubbish, green waste, scrap metal, construction debris, and general clutter.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do you provide large-scale cleanouts?</h4>
+        <p class="faq-answer">Yes! We handle garages, sheds, construction sites, and full-property cleanouts efficiently and safely.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How quickly can you remove waste?</h4>
+        <p class="faq-answer">Same-day service is often available for urgent requests. Otherwise, we’ll schedule a time that works for you.</p>
+      </div>
+
     </section>
   </main>
 
@@ -52,6 +117,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // FAQ toggle with arrows
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".faq-item h4");
+      items.forEach(item => {
+        item.addEventListener("click", () => {
+          const parent = item.parentElement;
+          const answer = item.nextElementSibling;
+
+          const isOpen = answer.style.display === "block";
+          answer.style.display = isOpen ? "none" : "block";
+
+          parent.classList.toggle("active", !isOpen);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

@@ -3,13 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title | Scrappers & Tippers</title>
+  <title>Pricing | Scrappers & Tippers</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="main.css">
+
+  <style>
+    /* ===== Pricing Section ===== */
+    .pricing-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .pricing-section h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .pricing-section p {
+      color: #f2f2f2;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* ===== Pricing Table ===== */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 40px 0;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      border: 1px solid #333;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    .pricing-table th {
+      background-color: #222;
+      color: #4dd0e1;
+      font-weight: 500;
+    }
+
+    .pricing-table td {
+      background-color: #111;
+      color: #f2f2f2;
+    }
+
+    .pricing-table tr:nth-child(even) td {
+      background-color: #1a1a1a;
+    }
+
+    /* ===== Extra Handling Section ===== */
+    .pricing-section ul {
+      max-width: 800px;
+      margin: 10px auto 30px auto;
+      padding-left: 20px;
+      color: #f2f2f2;
+    }
+
+    .pricing-section ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .pricing-section ul li::before {
+      content: "⚠️"; /* warning icon */
+      position: absolute;
+      left: 0;
+    }
+
+    .pricing-section strong {
+      color: #4dd0e1;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,10 +106,49 @@
 
   <!-- Main Content -->
   <main class="content">
-    <!-- Replace this section with page-specific content -->
-    <section>
-      <h1>Page Heading</h1>
-      <p>This is where your page content goes. Replace this with text, images, or other elements for this page.</p>
+    <section class="pricing-section">
+      <h1>Pricing</h1>
+      <p>We offer transparent rates depending on the type and volume of rubbish. See below for details:</p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Rubbish Type</th>
+            <th>Description</th>
+            <th>Price per m²</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Light Rubbish</td>
+            <td>Cardboard, paper, soft plastics</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Medium Rubbish</td>
+            <td>Mixed household items, small furniture, wood, garden waste</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Hard Rubbish</td>
+            <td>Large furniture, appliances, concrete, bricks</td>
+            <td>$150</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We also offer half, one, two, three, four, and five cubic meter loads. <strong>For loads larger than 5 cubic meters, please contact us for a quote.</strong></p>
+
+      <p>⚠️ Extra charges may apply for items that are difficult or require extra handling. This includes, but is not limited to:</p>
+      <ul>
+        <li>Very heavy or bulky items</li>
+        <li>Items with awkward shapes</li>
+        <li>Furniture or rubbish that needs to be carried up or down stairs</li>
+        <li>Items requiring extra time, effort, or special equipment to remove safely</li>
+      </ul>
+      <p>We will always discuss any extra charges with you upfront before proceeding.</p>
+
+      <p>📞 Call or text <strong>0435 763 573</strong> for a free quote or to schedule your rubbish removal.</p>
     </section>
   </main>
 

@@ -125,3 +125,105 @@ section {
   .hero-text p { font-size: 1rem; }
   .cta-button { padding: 12px 25px; }
 }
+
+.faq-item { 
+  margin-bottom: 20px; 
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+.faq-item h4 { 
+  cursor: pointer; 
+  color: #4dd0e1; 
+  position: relative;
+  padding-right: 25px;
+  transition: color 0.3s;
+}
+.faq-item h4::after {
+  content: "▶"; /* right arrow */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+.faq-item.active h4::after {
+  transform: translateY(-50%) rotate(90deg); /* rotates arrow down */
+}
+.faq-answer { 
+  margin-top: 8px; 
+  display: none; 
+  padding-left: 10px;
+}
+/* ===== Pricing Section ===== */
+.pricing-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.pricing-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.pricing-section p {
+  color: #f2f2f2;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ===== Pricing Table ===== */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 40px 0;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #333;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.pricing-table th {
+  background-color: #222;
+  color: #4dd0e1;
+  font-weight: 500;
+}
+
+.pricing-table td {
+  background-color: #111;
+  color: #f2f2f2;
+}
+
+.pricing-table tr:nth-child(even) td {
+  background-color: #1a1a1a;
+}
+
+/* ===== Extra Handling Section ===== */
+.pricing-section ul {
+  max-width: 800px;
+  margin: 10px auto 30px auto;
+  padding-left: 20px;
+  color: #f2f2f2;
+}
+
+.pricing-section ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.pricing-section ul li::before {
+  content: "⚠️"; /* warning icon */
+  position: absolute;
+  left: 0;
+}
+
+.pricing-section strong {
+  color: #4dd0e1;
+}
