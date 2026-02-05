@@ -3,22 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title | Scrappers & Tippers</title>
+  <title>Contact Scrappers & Tippers | Redlands Rubbish Removal & Scrap Metal Pickup</title>
+  <meta name="description" content="Contact Scrappers & Tippers for rubbish removal, scrap metal pickup, green waste removal, and tip runs in Redlands QLD. Call, email, or submit a form for a free quote.">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="main.css">
+
+  <style>
+    /* =============================
+       Hero Section for Contact Page
+    ============================== */
+    .hero.contact-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url("images/ute.jpg") center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .hero.contact-hero h1 {
+      font-size: 2.6rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    /* =============================
+       Contact Section
+    ============================== */
+    .contact-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1 1 400px;
+    }
+
+    .contact-info h2 {
+      color: #4dd0e1;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: #f2f2f2;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #4dd0e1;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: #35b8c7;
+    }
+
+    /* =============================
+       Form Styling
+    ============================== */
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, 
+    .contact-form select,
+    .contact-form textarea {
+      padding: 12px 15px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      background-color: #1a1a1a;
+      color: #f2f2f2;
+      font-size: 16px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      background-color: #ff4a4a;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .contact-form button:hover {
+      opacity: 0.9;
+    }
+
+    /* =============================
+       Trust Section
+    ============================== */
+    .contact-trust {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .contact-trust span {
+      color: #4dd0e1;
+    }
+
+    /* =============================
+       Responsive
+    ============================== */
+    @media(max-width: 700px) {
+      .contact-section {
+        flex-direction: column;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header">
     <div class="header-container">
-     <a href="index.html" class="sidebar-logo">
-    <img src="logo.png" alt="Scrappers & Tippers Logo">
-  </a>
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Scrappers & Tippers Logo">
+      </a>
       <nav class="nav">
         <a href="service.html">Services</a>
         <a href="pricing.html">Pricing</a>
@@ -29,13 +159,54 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Hero -->
+  <div class="hero contact-hero">
+    <h1>Contact Scrappers & Tippers</h1>
+  </div>
+
+  <!-- Main Contact Section -->
   <main class="content">
-    <!-- Replace this section with page-specific content -->
-    <section>
-      <h1>Page Heading</h1>
-      <p>This is where your page content goes. Replace this with text, images, or other elements for this page.</p>
+    <section class="contact-section">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>📞 Phone: <a href="tel:0435763573">0435 763 573</a></p>
+        <p>✉️ Email: <a href="mailto:admin@tippers.com">admin@tippers.com</a></p>
+        <p>Business Hours:</p>
+        <p>Monday – Saturday: 7am – 6pm</p>
+        <p>Sunday: Closed</p>
+        <p>Service Area: Redlands QLD, including Victoria Point, Thornlands, Cleveland, and surrounding suburbs. Extra charges apply for Mt Gravatt, Mansfield, or Wynnum due to distance.</p>
+        <p>Payment: Cash preferred, PayID accepted with a $10 surcharge. Payment is collected onsite.</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send a Message / Book a Pickup</h2>
+        <form action="submit_form.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="rubbish-removal">Rubbish Removal</option>
+            <option value="tip-run">Tip Run</option>
+            <option value="scrap-metal">Scrap Metal Collection</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea name="message" placeholder="Details of the items or questions..." required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
     </section>
+
+    <!-- Trust Elements -->
+    <div class="contact-trust">
+      <span>✔ Local Redlands service</span>
+      <span>✔ Responsible disposal & recycling</span>
+      <span>✔ No hidden fees</span>
+    </div>
   </main>
 
   <!-- Footer -->

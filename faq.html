@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ | Scrappers & Tippers</title>
+  <title>Rubbish Removal & Scrap Metal Pickup FAQ | Scrappers & Tippers Redlands QLD</title>
+  <meta name="description" content="Frequently Asked Questions about rubbish removal, scrap metal collection, tip runs, and green waste services in Redlands QLD. Learn about pricing, bookings, and accepted items.">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,14 +13,46 @@
   <link rel="stylesheet" href="main.css">
 
   <style>
-    /* FAQ Styling */
+    /* =============================
+       FAQ Section
+    ============================== */
+    .faq-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .faq-section h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4dd0e1;
+    }
+
+    /* Search Bar */
+    #faq-search {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      font-size: 16px;
+      background-color: #1a1a1a;
+      color: #f2f2f2;
+    }
+
+    #faq-search::placeholder {
+      color: #888;
+    }
+
+    /* FAQ Items */
     .faq-item { 
       margin-bottom: 20px; 
       border-bottom: 1px solid #333;
       padding-bottom: 10px;
+      transition: all 0.3s ease;
     }
 
-    .faq-item h4 { 
+    .faq-item h2 { 
       cursor: pointer; 
       color: #4dd0e1; 
       position: relative;
@@ -27,7 +60,11 @@
       transition: color 0.3s;
     }
 
-    .faq-item h4::after {
+    .faq-item h2:hover {
+      color: #35b8c7;
+    }
+
+    .faq-item h2::after {
       content: "▶"; /* right arrow */
       position: absolute;
       right: 0;
@@ -36,25 +73,96 @@
       transition: transform 0.3s ease;
     }
 
-    .faq-item.active h4::after {
+    .faq-item.open h2::after {
       transform: translateY(-50%) rotate(90deg); /* rotates arrow down */
     }
 
-    .faq-answer { 
-      margin-top: 8px; 
-      display: none; 
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #f2f2f2;
+      line-height: 1.6;
+      margin-top: 8px;
       padding-left: 10px;
     }
+
+    .faq-item.open .faq-answer {
+      max-height: 1000px; /* enough to show content */
+    }
+
+    .faq-answer ul {
+      margin-top: 8px;
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .faq-item.hidden {
+      display: none !important;
+    }
   </style>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are your pricing options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the type and volume of waste. Fixed quotes require full details. Minimum charge $100. Victoria Point customers with few items $50. A couple of extra items beyond the quote is usually fine, but large additions may incur extra charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I book a pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book online or over the phone. Booking in advance is recommended, especially during busy periods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to be home when you pick up the rubbish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not always. Drop-offs or clean-ups can be arranged with prior permission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cash is preferred and collected onsite. PayID accepted with a $10 surcharge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you recycle scrap metal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all scrap metal is taken to a local scrap yard for recycling."
+        }
+      }
+      // Add all other FAQs in the same format
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header">
     <div class="header-container">
-  <a href="index.html" class="sidebar-logo">
-    <img src="logo.png" alt="Scrappers & Tippers Logo">
-  </a>      <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Scrappers & Tippers Logo">
+      </a>
+      <nav class="nav">
         <a href="service.html">Services</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
@@ -66,37 +174,96 @@
 
   <!-- Main Content -->
   <main class="content">
-    <section>
-      <h1>Frequently Asked Questions</h1>
+    <section class="faq-section">
+      <h1>Frequently Asked Questions about Rubbish Removal in Redlands QLD</h1>
 
+      <!-- Search bar -->
+      <input type="text" id="faq-search" placeholder="Search FAQs...">
+
+      <!-- FAQ Items -->
       <div class="faq-item">
-        <h4>What are your pricing options?</h4>
-        <p class="faq-answer">Pricing depends on the type and volume of waste. We offer transparent, affordable rates—see our pricing page for more details.</p>
+        <h2>What are your pricing options?</h2>
+        <div class="faq-answer">
+          
+          Pricing depends on the type and volume of waste. I provide a fixed quote if I have all the necessary information. There is a minimum charge of $100, but if you are in Victoria Point and only have a few items, the minimum is $50. If you have a couple of extra items beyond the quote, that is usually fine, but adding a lot more is not encouraged. For significant extra work, you can choose to stick with the original quote or pay for the additional items.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Do I need to be home when you pick up the rubbish?</h4>
-        <p class="faq-answer">Not always. We can arrange a convenient drop-off time or handle on-site clean-ups with prior permission.</p>
+        <h2>How can I book a pickup?</h2>
+        <div class="faq-answer">
+          You can book online or over the phone. Booking in advance is recommended, especially during busy periods. <a href="contact.html">Book here</a>.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Do you recycle scrap metal?</h4>
-        <p class="faq-answer">Yes! We separate and recycle all scrap metal responsibly, reducing landfill and supporting sustainable practices.</p>
+        <h2>Do I need to be home when you pick up the rubbish?</h2>
+        <div class="faq-answer">
+          Not always. Drop-offs or clean-ups can be arranged with prior permission. Please notify me if you cannot be present.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>What types of waste do you collect?</h4>
-        <p class="faq-answer">We handle household rubbish, green waste, scrap metal, construction debris, and general clutter.</p>
+        <h2>What payment methods do you accept?</h2>
+        <div class="faq-answer">
+          Cash is the preferred payment method, collected onsite. PayID is accepted with a $10 surcharge.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>Do you provide large-scale cleanouts?</h4>
-        <p class="faq-answer">Yes! We handle garages, sheds, construction sites, and full-property cleanouts efficiently and safely.</p>
+        <h2>Do you recycle scrap metal?</h2>
+        <div class="faq-answer">
+          Yes! All scrap metal is taken to a local scrap yard for recycling.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h4>How quickly can you remove waste?</h4>
-        <p class="faq-answer">Same-day service is often available for urgent requests. Otherwise, we’ll schedule a time that works for you.</p>
+        <h2>Do you donate items?</h2>
+        <div class="faq-answer">
+          Yes! Any items that are still in good condition are donated to op shops in Redlands to support the local community.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2>Can you handle heavy or awkward items?</h2>
+        <div class="faq-answer">
+ <p class="faq-answer">
+          I can handle many heavy or awkward items using a vehicle-mounted crane when necessary. “Heavy or awkward” items include:
+          <ul>
+            <li>Large, bulky, or oddly-shaped furniture</li>
+            <li>Items that need to be carried up or down stairs</li>
+            <li>Materials that require lifting with special equipment</li>
+          </ul>
+          You must inform me of any such items before booking so I can bring the right equipment and plan the pickup efficiently. I will assess each item and determine the safest way to remove it. If extra effort or time is required, I will discuss any additional charges with you upfront.
+        </p>        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2>Are you insured?</h2>
+        <div class="faq-answer">
+          I am not insured, as I do not transport items over long distances or offsite beyond local tip runs. The owner of the items is responsible for ensuring their safe handling and any potential damage during pickup. I always take care when handling items, but liability remains with the owner.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2>Do you accept hazardous or restricted items?</h2>
+        <div class="faq-answer">
+<p class="faq-answer">
+          I can handle many heavy or awkward items using a vehicle-mounted crane when necessary. “Heavy or awkward” items include:
+          <ul>
+            <li>Large, bulky, or oddly-shaped furniture</li>
+            <li>Appliances such as fridges, ovens, washers, and dryers</li>
+            <li>Items that need to be carried up or down stairs</li>
+            <li>Materials that require lifting with special equipment</li>
+          </ul>
+          You must inform me of any such items before booking so I can bring the right equipment and plan the pickup efficiently. I will assess each item and determine the safest way to remove it. If extra effort or time is required, I will discuss any additional charges with you upfront.
+        </p>        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2>What is your cancellation policy?</h2>
+        <div class="faq-answer">
+I require at least 1 day’s notice for cancellations. This allows me to adjust my schedule and offer the slot to other customers. Please contact me as soon as possible if you need to cancel or reschedule.        </div>
       </div>
 
     </section>
@@ -119,18 +286,28 @@
   </footer>
 
   <script>
-    // FAQ toggle with arrows
+    // FAQ toggle and search
     document.addEventListener("DOMContentLoaded", () => {
-      const items = document.querySelectorAll(".faq-item h4");
+      const items = document.querySelectorAll(".faq-item h2");
+
       items.forEach(item => {
         item.addEventListener("click", () => {
           const parent = item.parentElement;
-          const answer = item.nextElementSibling;
+          parent.classList.toggle("open");
+        });
+      });
 
-          const isOpen = answer.style.display === "block";
-          answer.style.display = isOpen ? "none" : "block";
-
-          parent.classList.toggle("active", !isOpen);
+      const searchInput = document.getElementById("faq-search");
+      searchInput.addEventListener("input", () => {
+        const filter = searchInput.value.toLowerCase();
+        document.querySelectorAll(".faq-item").forEach(item => {
+          const question = item.querySelector("h2").textContent.toLowerCase();
+          const answer = item.querySelector(".faq-answer").textContent.toLowerCase();
+          if (question.includes(filter) || answer.includes(filter)) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
         });
       });
     });
