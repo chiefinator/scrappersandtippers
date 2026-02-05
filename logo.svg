@@ -1,0 +1,20 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .brand-text { font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+    .small-text { font-size: 14px; font-weight: 500; }
+  </style>
+
+  <!-- Icon -->
+  <rect x="0" y="10" width="60" height="40" rx="4" fill="#2e7d32"></rect>
+  <rect x="8" y="18" width="28" height="18" fill="#ffffff"></rect>
+  <circle cx="18" cy="56" r="6" fill="#333"></circle>
+  <circle cx="44" cy="56" r="6" fill="#333"></circle>
+
+  <!-- Text -->
+  <text x="75" y="35" class="brand-text" font-size="26" fill="#222">
+    Scrappers &amp; Tippers
+  </text>
+  <text x="75" y="55" class="small-text" fill="#555">
+    Rubbish Removal &amp; Scrap Collection
+  </text>
+</svg>
