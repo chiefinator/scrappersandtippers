@@ -227,14 +227,30 @@ section {
 .pricing-section strong {
   color: #4dd0e1;
 }
-.logo {
+.sidebar-logo {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
   color: inherit;
+  padding: 12px;
 }
 
-.logo:hover {
-  opacity: 0.85;
+.sidebar-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: #2e7d32;      /* optional brand background */
+  padding: 6px;
+  border-radius: 6px;       /* square but not ugly */
+}
+
+.sidebar-logo span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;      /* keeps it one line */
+}
+.sidebar-logo:hover {
+  background: rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
