@@ -227,3 +227,14 @@ section {
 .pricing-section strong {
   color: #4dd0e1;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
